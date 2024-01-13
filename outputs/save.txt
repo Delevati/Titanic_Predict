@@ -1,0 +1,57 @@
+#Data FODLER obtida no kaggle, levemente manuseada com o bjetivo de buscar de melhores resultados (alterações como trocar M F para binario)
+#Foram testados 3 tipos de machine larning:
+ - SVM (Support Vector Machine)
+ - Random Forest 
+ - KNN (k-Nearest Neighbors)
+
+ Archives: 
+ - correlation_matrix.txt é somente um comparador de valores de correlação das colunas via seaborn, seu output.
+ - test.csv são os arquivos de teste contendo alguns exemplos para comparação da acuracia, fornecido via kaggle.
+ - train.csv são os arquivos com dados reais, fornecidos pela kaggle.
+ - gender_submission.csv arquivo de comparativo real, fornecido pela kaggle.
+ - train_rforest_MF  este eu alterei male e female para binário.
+
+ #Utils FODLER se encontra algumas ferramentas que utilizei para analisar e correlacioinar as colunas, manipular alguns campos vazios e também fazer testes
+ e tenta criar uma forma de categorzar alguns dados para terem aproveitamento, mas acabei por não utilizar alguns dos reusltados, mas mantive os arquivos.
+ - evaluate.py faz uma comparação dos arquivos de saída (outputs FOLDER) com o arquivo gender_submission.
+ - knn_mvletter_cabin.py faz a alteração da string da coluna Cabin, mapeamento_letras das letras alteradas em numeros: = {'A': '1', 'B': '2', 'C': '3', 'D': '4', 'E': '5', 'F': '6', 'G': '7', 'T': '8'} 
+ - knn_rmletter_cabin.py faz o oposto da mvletter, faz a remoção das letras na coluna Cabin, deixando apenas os numeros.
+ - matriz_correlacoes_colunas_plot.py faz a avaliação grafica via plot com os dados correlacionados pelo seaborn.
+ - matriz_correlacoes_colunas_text.py faz a mesmo avaliação acima ser exportada em texto.
+ - Verify_data_head.py este é muito importante, torna possível VISUALIZAR os dados da tabela de forma diferente, muit útil.
+
+#model_svm_titanic79ac.py - Model SVM obtive um resultado de -79,42%- de acurácia utilizando as informações ["Pclass", "Sex", "SibSp", "Parch", "Fare", "Age"]
+      Accuracy: 0.7942643391521197
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.80      0.88      0.84       494
+           1       0.78      0.65      0.71       308
+
+    accuracy                           0.79       802
+   macro avg       0.79      0.77      0.77       802
+weighted avg       0.79      0.79      0.79       802
+
+#model_rforest_titanic79ac.py - Model RANDOM FOREST obtive um resultado de -79,88%- de acurácia utilizando as informações: ["Pclass", "Sex", "SibSp", "Parch", "Fare", "Age"]
+      Overall Accuracy: 0.7988826815642458
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.90      0.84       106
+           1       0.81      0.66      0.73        73
+
+    accuracy                           0.80       179
+   macro avg       0.80      0.78      0.78       179
+weighted avg       0.80      0.80      0.79       179
+
+#model_knn_titanic80ac.py - Model KNN obtive um resultado de -80,04%- de acurácia utilizando as informações: ["Pclass", "SibSp", "Sex"]
+      Accuracy: 0.800498753117207
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.80      0.90      0.85       490
+           1       0.80      0.64      0.72       312
+
+    accuracy                           0.80       802
+   macro avg       0.80      0.77      0.78       802
+weighted avg       0.80      0.80      0.80       802
