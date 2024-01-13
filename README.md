@@ -9,7 +9,7 @@ Foram testados três tipos de algoritmos de machine learning:
 - Random Forest
 - KNN (k-Nearest Neighbors)
 
-## Arquivos
+## Pasta Data
 
 - `correlation_matrix.txt`: Comparador de valores de correlação das colunas via seaborn.
 - `test.csv`: Arquivos de teste contendo exemplos para comparação de acurácia, fornecidos pelo Kaggle.
