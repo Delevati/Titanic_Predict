@@ -34,9 +34,12 @@ A pasta `Utils` contém algumas ferramentas utilizadas para analisar, correlacio
     Accuracy: 0.7942643391521197
 
 
-# Model Random Forest - model_rforest_titanic79ac.py
+# Model Random Forest - model_rforest1_titanic79ac.py
  Obtive um resultado de acurácia de aproximadamente 79,88% utilizando as seguintes informações: ["Pclass", "Sex", "SibSp", "Parch", "Fare", "Age"].
-    Accuracy: 0.7988826815642458
+    Accuracy: 0.9382716049382716
+
+# Model Random Forest - model_rforest_titanic79ac.py
+ Accuracy: xxxx
 
 # Model KNN (k-Nearest Neighbors) - model_knn_titanic80ac.py
  Obtive um resultado de acurácia de aproximadamente 79,88% utilizando as seguintes informações: ["Pclass", "SibSp", "Sex"].

@@ -6,7 +6,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-train_data = pd.read_csv('/Users/luryan/Documents/persona_project/titanic_dataset/data/train.csv')
+train_data = pd.read_csv('/Users/luryan/Documents/persona_project/titanic_dataset/Data/train_rforest_MF.csv')
 test_data = pd.read_csv('/Users/luryan/Documents/persona_project/titanic_dataset/data/test.csv')
 
 features = ["Pclass", "SibSp", "Sex"]
@@ -14,7 +14,7 @@ features = ["Pclass", "SibSp", "Sex"]
 X = train_data[features]
 y = train_data["Survived"]
 
-X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.9, random_state=1)
+X_train, X_val, y_train, y_val = train_test_split(X, y)
 plt.figure(figsize=(8, 6))
 sns.heatmap(X_train.corr(), annot=True, cmap='coolwarm', fmt='.2f')
 # plt.title('Correlation Matrix')

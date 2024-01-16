@@ -7,7 +7,7 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report
 
 # Leitura dos dados
-train_data = pd.read_csv('/Users/luryan/Documents/persona_project/titanic_dataset/train.csv')
+train_data = pd.read_csv('/Users/luryan/Documents/persona_project/titanic_dataset/data/train.csv')
 test_data = pd.read_csv('/Users/luryan/Documents/persona_project/titanic_dataset/data/test.csv')
 
 # Pré-processamento dos dados
@@ -20,7 +20,7 @@ imputer = SimpleImputer(strategy='mean')
 X = pd.DataFrame(imputer.fit_transform(X), columns=X.columns)
 
 # Divisão do conjunto de treino e teste
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.9, random_state=5)
+X_train, X_test, y_train, y_test = train_test_split(X, y)
 
 # Padronização dos dados (escalonamento)
 scaler = StandardScaler()
