@@ -17,8 +17,8 @@ def calcular_porcentagem_acerto(arquivo_real, arquivo_resultado):
     return porcentagem_acerto
 
 if __name__ == "__main__":
-    arquivo_real = "/Users/luryan/Documents/persona_project/titanic_dataset/gender_submission.csv"
-    arquivo_resultado = "/Users/luryan/Documents/persona_project/titanic_dataset/submission_knn.csv"
+    arquivo_real = "/Users/luryan/Documents/persona_project/titanic_dataset/Data/gender_submission.csv"
+    arquivo_resultado = "/Users/luryan/Documents/persona_project/titanic_dataset/submission.csv"
 
     porcentagem_acerto = calcular_porcentagem_acerto(arquivo_real, arquivo_resultado)
 
